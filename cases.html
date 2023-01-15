@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,70 +8,71 @@
     <link rel="stylesheet" href="cases.css">
     <title>Document</title>
 </head>
+
 <body onload="trace()">
 
     <!--  La div de gauche où on visualise l'écran -->
 
     <div class="rubrique" id="screen">
 
-<!-- Le damier à proprement parler -->
-    <canvas id="theCanvas" onclick="identify(event)">
+        <!-- Le damier à proprement parler -->
+        <canvas id="theCanvas" onclick="identify(event)">
 
 
-    </canvas>
-</div>
+        </canvas>
+    </div>
 
-<!-- La div de droite où on entre le jeu -->
+    <!-- La div de droite où on entre le jeu -->
 
     <div class="rubrique" id="console">
 
 
-<!--  Le PARAG qui indique le joueur et le numéro -->
-        <p id="infos">     INFOS</p>
+        <!--  Le PARAG qui indique le joueur et le numéro -->
+        <p id="infos"> INFOS ici</p>
 
 
-<!--  Le FORM -->
+        <!--  Le FORM -->
         <form id="indic_game">
 
-        <p id="inputs_parag">  
-           
-            
-          
-            <span>
-            
-            <label for="from_input"> FROM</label>
-            <input type="text" id="from_input">
-        
-        </span>
-    
-            <span>
-            <label for="to_input"> TO</label>
-            <input type="text" id="to_input">
-        </span>
-
-        </p>
-
-        <p>
-           
-
-            <label for="move_radio"> <i class="fa-solid fa-truck-moving"></i></label>
-            <input type="radio" id="move_radio" name="chooser">
-
-            <label for="eat_radio"> <i class="fa-solid fa-utensils"></i></label>
-            <input type="radio" id="eat_radio" name="chooser">
+            <p id="inputs_parag">
 
 
 
+                <span>
+
+                    <label for="from_input"> FROM</label>
+                    <input type="text" id="from_input">
+
+                </span>
+
+                <span>
+                    <label for="to_input"> TO</label>
+                    <input type="text" id="to_input">
+                </span>
+
+            </p>
+
+            <p>
 
 
+                <label for="move_radio"> <i class="fa-solid fa-truck-moving"></i></label>
+                <input type="radio" id="move_radio" name="chooser">
 
-        </p>
+                <label for="eat_radio"> <i class="fa-solid fa-utensils"></i></label>
+                <input type="radio" id="eat_radio" name="chooser">
 
 
 
 
 
-<button id="player_button">    PLAY</button>
+
+            </p>
+
+
+
+
+
+            <button id="player_button"> PLAY</button>
 
 
 
@@ -82,11 +84,12 @@
 
 
     </div>
-    
+
 
 
 
 
     <script src="cases.js">                 </script>
 </body>
+
 </html>
