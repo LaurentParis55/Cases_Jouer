@@ -117,8 +117,10 @@ function identify(event) {
 
     loc_from.value = numéroDeCase;
     PlayThis.push(numéroDeCase);
-    if (move_radio.checked == true && TableauVal[PlayThis[0]].vacant == true) {
-      alert("LA CASE EST VIDE");
+
+    if (move_radio.checked){PlayThis.push(numéroDeCase+10);
+                            alert(PlayThis)} 
+      
 
 
 
@@ -147,7 +149,7 @@ function identify(event) {
 
 
   }
-}
+
 
 /* screenX, clientX, pageX, offsetX */
 
