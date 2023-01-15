@@ -9,7 +9,11 @@ canvas.width = 901;
 canvas.height = 901;
 let gamegrid = [];
 PlayThis = [];
+var ArrayPionsBlancs = [[45,45],[135,45],[225,45],[315,45],[405,45],[495,45],[585,45],[675,45],[765,45],[855,45]];
+var ArrayPionsBruns  = [[45,856],[135,856],[225,856],[315,856],[405,856],[495,856],[585,856],[675,856],[765,856],[855,856]];
 const cellSize = 90;
+let nbreDeCoupsJoués = 0;
+const mod = nbreDeCoupsJoués%2;
 const loc_from = document.querySelector("#from_input");
 const loc_to = document.querySelector("#to_input");
 const loc_move = document.querySelector("#move_radio");
@@ -94,6 +98,75 @@ const TableauVal =
 
 
 
+  class Blanc{
+    constructor(x, y){ this.x = x;
+                       this.y = y;
+                       this.radius = 40;
+                       this.number = nbreDePions;
+                                                    }
+draw(){
+    ctx.fillStyle = 'Silver';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+    ctx.closePath;
+    ctx.fill();
+}}
+function initPionsBlancs() {
+                                pbArray = [];
+                                for(let i = 0; i<nbreDePions; i++){
+                                    let x = ArrayPionsBlancs[i][0];
+                                    let y = 45
+                                pbArray.push(new Blanc(x, y))
+                                
+                             }}
+initPionsBlancs();
+
+function dessinew(){
+    for(let i = 0; i<pbArray.length; i++){
+        pbArray[i].draw();
+    }
+    requestAnimationFrame(dessinew);
+}
+dessinew();
+
+
+class Brun{
+    constructor(x, y){ this.x = x;
+                       this.y = y;
+                       this.radius = 40;
+                       this.number = nbreDePions;
+                                                    }
+draw(){
+    ctx.fillStyle = 'Maroon';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+    ctx.closePath;
+    ctx.fill();
+}}
+function initPionsBruns() {
+                                pnArray = [];
+                                for(let i = 0; i<nbreDePions; i++){
+                                    let x = ArrayPionsBruns[i][0];
+                                    let y = 856
+                                pnArray.push(new Brun(x, y))
+                                
+                             }}
+initPionsBruns();
+
+function dessineb(){
+    for(let i = 0; i<pnArray.length; i++){
+        pnArray[i].draw();
+    }
+    requestAnimationFrame(dessineb);
+}
+dessineb();
+
+//JUSQU'ICI *Initialisation des Pions* //
+
+
+
+
+
 
 
 
@@ -120,38 +193,28 @@ function identify(event) {
 
     if (move_radio.checked){PlayThis.push(numéroDeCase+10);
                             alert(PlayThis)} 
+
+    if(eat_radio.checked){PlayThis.push( numéroDeCase+11, numéroDeCase+22);
+    alert(PlayThis)}                        
       
+} else { loc_to.value = numéroDeCase;
+         PlayThis.push(numéroDeCase); } alert(PlayThis);
+                                                          }
 
-
-
-
-
-    } else {
-
-
-      loc_to.value = numéroDeCase;
-      PlayThis.push(numéroDeCase);
-
-
-
-
-
-
-
-
-
-    } alert(PlayThis);
-
-
-
-
-
-
-
-  }
-
-
+                                                          function nombreDeCoups(){
+                                                                                       let message = document.getElementById("infos");
+                                                                                       message.innerHTML="hi";
+                                                                                       nbreDeCoupsJoués += 1;
+                                                                                                                                               }
+                                                      
 /* screenX, clientX, pageX, offsetX */
+
+
+
+/*
+function animateTheGame(){initialize, nbreDeCoup, play, actualize}
+
+initialize = 
 
 
 
