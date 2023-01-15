@@ -1,0 +1,28 @@
+*{box-sizing:border-box; scroll-behavior:smooth;}
+
+body{width:100vw; height: 100vh; margin:0; padding: 0; overflow: hidden; position: fixed; top:0; left:0; display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center;}
+
+canvas{width:900px; height:900px; border:2px solid tomato; position: fixed; top:0; left:0}
+
+.rubrique{width:50%; height: 100%; border: 5px dotted tomato;}
+
+#infos{width:90%; height:5%; border:1px solid teal; margin: 1% auto; text-align: center; font-size: 5vh; cursor: pointer;}
+
+#indic_game{width:90%; height:25%; border:1px solid teal; margin:10% auto; display:flex; flex-flow: column nowrap; justify-content: space-around; align-items: center; cursor: pointer;}
+
+#player_button{width:95%; height: 17%; margin: 2% auto; background-color: #fff; color:navy; font-size: 29px; font-weight: bold; border:1px solid navy;
+    
+text-align: center; transition-duration:800ms; transition-timing-function: ease-in-out; cursor:pointer}
+
+#player_button:hover{width:95%; height: 17%; margin: 2% auto; background-color:navy; color:white; font-size: 29px; font-weight: bold;
+
+border:1px solid navy; text-align: center; transition-duration: 90ms; transition-timing-function: ease-in;}
+
+
+#player_button:active{width:95%; height: 17%; margin: 2% auto; background-color:navy; color:white; font-size: 29px; font-weight: bold;
+
+border:1px solid navy; text-align: center; box-shadow: 5px 5px 2px #99f;}
+
+#inputs_parag{width:95%; height:20%; display: flex; flex-flow: row nowrap; justify-content: space-around; align-items: center;}
+
+input{margin-left: 0;}
